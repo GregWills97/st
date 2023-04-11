@@ -135,4 +135,3 @@ extern unsigned int defaultfg;
 extern unsigned int defaultbg;
 extern unsigned int defaultcs;
 extern float alpha;
-extern MouseKey mkeys[];
