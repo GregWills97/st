@@ -1,20 +1,20 @@
 /* See LICENSE file for copyright and license details. */
 
 
-static int load_xresources = 1;	/* 1 means load colors from Xresources */
+static int load_xresources = 0;	/* 1 means load colors from Xresources */
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=15:antialias=true:autohint=true";
 
 /* Spare fonts */
 static char *font2[] = {
-	"JoyPixels:style=Regular:size=10:antialias=true:autohint=true",
-	"Font Awesome 5 Free Regular:style=Regular:size=10:antialias=true:autohint=true",
-	"Font Awesome 5 Free Solid:style=Solid:size=10:antialias=true:autohint=true",
-	"Font Awesome 5 Brands Regular:style=Regular:size=10:antialias=true:autohint=true",
+	"JoyPixels:style=Regular:size=12:antialias=true:autohint=true",
+	"Font Awesome 5 Free Regular:style=Regular:size=12:antialias=true:autohint=true",
+	"Font Awesome 5 Free Solid:style=Solid:size=12:antialias=true:autohint=true",
+	"Font Awesome 5 Brands Regular:style=Regular:size=12:antialias=true:autohint=true",
 };
 
 static int borderpx = 2;
@@ -119,35 +119,55 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+#define cursorcolor	"#e0def4"
+#define background	"#232136"
+#define foreground	"#e0def4"
+#define color0		"#393551"
+#define color1		"#eb6f92"
+#define color2		"#a3be8c"
+#define color3		"#f6c177"
+#define color4		"#569fba"
+#define color5		"#c4a7e7"
+#define color6		"#9ccfd8"
+#define color7		"#e0def4"
+#define color8		"#47407d"
+#define color9		"#f083a2"
+#define color10		"#b1d196"
+#define color11		"#f9cb8c"
+#define color12		"#65b1cd"
+#define color13		"#ccb1ed"
+#define color14		"#a6dae3"
+#define color15		"#e2e0f7"
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	color0,
+	color1,
+	color2,
+	color3,
+	color4,
+	color5,
+	color6,
+	color7,
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	color8,
+	color9,
+	color10,
+	color11,
+	color12,
+	color13,
+	color14,
+	color15,
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	cursorcolor,
+	foreground, /* default foreground colour */
+	background, /* default background colour */
 };
 
 
